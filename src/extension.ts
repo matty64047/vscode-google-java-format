@@ -52,7 +52,7 @@ class GoogleJavaFormatProvider
       let child = cp.spawn(executablePath, [
         "--lines",
         `${range.start.line}:${range.end.line}`,
-        ` ${document.fileName}`,
+        `${document.fileName}`,
       ]);
       child.stdout.on("data", (chunk) => (stdout += chunk));
       child.stderr.on("data", (chunk) => (stderr += chunk));
