@@ -53,6 +53,7 @@ class GoogleJavaFormatProvider
         "--lines",
         `${range.start.line}:${range.end.line}`,
         "-",
+        `${document.fileName}`
       ]);
       child.stdout.on("data", (chunk) => (stdout += chunk));
       child.stderr.on("data", (chunk) => (stderr += chunk));
